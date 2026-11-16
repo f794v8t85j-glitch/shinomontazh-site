@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Легковой и грузовой шиномонтаж в Новосибирске и Коченёвском районе. Шиномонтаж, ремонт шин, вулканизация.">
+  <title>Шиномонтаж | Легковой и грузовой сервис</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="#home" aria-label="На главную">
+    <span class="brand-mark">Ш</span>
+    <span><b>ШИННЫЙ СЕРВИС</b><small>ЛЕГКОВОЙ · ГРУЗОВОЙ</small></span>
+  </a>
+  <nav class="nav">
+    <a class="active" href="#home">Главная</a>
+    <a href="#services">Услуги</a>
+    <a href="#prices">Цены</a>
+    <a href="#locations">Где работаем</a>
+    <a href="#partners">Партнёры</a>
+  </nav>
+  <a class="header-phone" href="tel:+79833196498">8 983 319-64-98 <span>↗</span></a>
+  <button class="menu-toggle" aria-label="Открыть меню">☰</button>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="eyebrow"><span></span> НОВОСИБИРСК · КОЧЕНЁВСКИЙ РАЙОН</div>
+    <h1>Держим ваш<br><em>путь на ходу.</em></h1>
+    <p class="hero-lead">Профессиональный шиномонтаж и ремонт шин для легковых автомобилей, грузового транспорта и спецтехники.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="tel:+79833196498">Позвонить нам <span>↗</span></a>
+      <a class="btn btn-ghost" href="#prices">Посмотреть цены</a>
+    </div>
+    <div class="hero-proof"><span class="proof-icon">✓</span> Работаем с частными клиентами и организациями</div>
+  </div>
+  <div class="hero-visual" aria-label="Колесо грузового автомобиля">
+    <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+    <div class="wheel"><div class="wheel-inner"><div class="wheel-hub"></div></div></div>
+    <div class="visual-tag tag-top"><b>24/7</b><small>на связи</small></div>
+    <div class="visual-tag tag-bottom"><b>ЛЕГКОВЫЕ</b><small>ГРУЗОВЫЕ · СПЕЦТЕХНИКА</small></div>
+  </div>
+  <div class="hero-bottom"><span>01 / НАДЁЖНЫЙ СЕРВИС</span><span>ЛИСТАЙТЕ НИЖЕ ↓</span></div>
+</section>
+
+<section class="stats">
+  <div><strong>2</strong><span>направления сервиса</span></div>
+  <div><strong>3</strong><span>рабочие локации</span></div>
+  <div><strong>100%</strong><span>внимание к каждой детали</span></div>
+  <div><strong>1</strong><span>номер для связи с руководством</span></div>
+</section>
+
+<section class="section services" id="services">
+  <div class="section-heading">
+    <div><div class="eyebrow dark"><span></span> ЧТО МЫ ДЕЛАЕМ</div><h2>Сервис для любого<br><em>масштаба задач.</em></h2></div>
+    <p>От повседневной замены колёс до обслуживания грузовой техники и сложного ремонта шин.</p>
+  </div>
+  <div class="service-cards">
+    <article class="service-card passenger">
+      <div class="service-number">01 / ЛЕГКОВОЙ</div><div class="service-symbol">◉</div>
+      <h3>Легковой<br>шиномонтаж</h3>
+      <p>Сезонная смена шин, монтаж и демонтаж, балансировка и проверка давления.</p>
+      <a href="tel:+79833196498">Уточнить стоимость <span>↗</span></a>
+    </article>
+    <article class="service-card truck">
+      <div class="service-number">02 / ГРУЗОВОЙ</div><div class="service-symbol">◉</div>
+      <h3>Грузовой сервис<br>и спецтехника</h3>
+      <p>Работа с грузовыми колёсами, ремонт шин, вулканизация и обслуживание спецтехники.</p>
+      <a href="#prices">Смотреть прайс <span>↗</span></a>
+    </article>
+  </div>
+</section>
+
+<section class="section price-section" id="prices">
+  <div class="section-heading price-heading">
+    <div><div class="eyebrow"><span></span> ПРОЗРАЧНАЯ СТОИМОСТЬ</div><h2>Прайс-лист <em>работ.</em></h2></div>
+    <p>Цены указаны в рублях. Итоговая стоимость зависит от размера колеса, состояния шины и сложности работ. Уточняйте цену перед обслуживанием.</p>
+  </div>
+  <div class="price-tabs" role="tablist">
+    <button class="price-tab selected" data-target="truck-prices">Грузовой шиномонтаж</button>
+    <button class="price-tab" data-target="repair-prices">Ремонтные работы</button>
+    <button class="price-tab" data-target="patch-prices">Ремонт заплатами</button>
+  </div>
+
+  <div class="price-panel visible" id="truck-prices">
+    <div class="table-wrap"><table>
+      <thead><tr><th>Шиномонтажные работы</th><th>R15–16<br>с кольцом</th><th>R17.5</th><th>R19.5</th><th>R20<br>с кольцом</th><th>R22.5</th><th>R24.5</th><th>R24<br>с кольцом</th><th>Спецтехника</th></tr></thead>
+      <tbody>
+      <tr><td>Колесо переднее — снятие / установка (гружёное)</td><td>450</td><td>500</td><td>600–900</td><td>700–900</td><td>600–1000</td><td>800–1000</td><td>1000–1500</td><td>500–3500</td></tr>
+      <tr><td>Колесо заднее внутреннее — снятие / установка (гружёное)</td><td>500–800</td><td>600–800</td><td>600–1000</td><td>800–1000</td><td>700–1000</td><td>1000–1500</td><td>1500–2000</td><td>—</td></tr>
+      <tr><td>Колесо запасное — снятие / установка</td><td>700</td><td>1000</td><td>1000</td><td>1000</td><td>1000</td><td>1500</td><td>2000</td><td>—</td></tr>
+      <tr><td>Демонтаж покрышки</td><td>500</td><td>300</td><td>300</td><td>1000</td><td>400</td><td>700</td><td>1500</td><td>—</td></tr>
+      <tr><td>Монтаж покрышки</td><td>500</td><td>300</td><td>300</td><td>1000</td><td>400</td><td>700</td><td>1500</td><td>500–10000</td></tr>
+      <tr><td>Шиномонтаж покрышки</td><td>1000</td><td>600</td><td>600</td><td>1800</td><td>600</td><td>1300</td><td>3000</td><td>700–10000</td></tr>
+      <tr><td>Балансировка (1 г)</td><td>700</td><td>600</td><td>600</td><td>1000</td><td>600</td><td>1000</td><td>1000</td><td>500–3500</td></tr>
+      <tr><td>Чистка диска</td><td>50</td><td>100</td><td>100</td><td>100</td><td>100</td><td>100</td><td>100</td><td>300</td></tr>
+      <tr><td>Чистка и смазка ступицы и шпилек</td><td>50</td><td>100</td><td>100</td><td>100</td><td>100</td><td>100</td><td>100</td><td>100</td></tr>
+      <tr><td>Протяжка гаек (1 колесо, 10 шт.)</td><td>50</td><td>100</td><td>100</td><td>100</td><td>100</td><td>100</td><td>100</td><td>100–500</td></tr>
+      </tbody></table></div>
+  </div>
+
+  <div class="price-panel" id="repair-prices">
+    <div class="table-wrap"><table>
+      <thead><tr><th>Ремонтные работы</th><th>R15–16<br>с кольцом</th><th>R17.5</th><th>R19.5</th><th>R20<br>с кольцом</th><th>R22.5</th><th>R24</th><th>Спецтехника</th></tr></thead>
+      <tbody>
+      <tr><td>Определение прокола в б/у шине или камере</td><td>100</td><td>100</td><td>100</td><td>100</td><td>100</td><td>100–500</td><td>500–1000</td></tr>
+      <tr><td>Удаление старого ремонтного материала</td><td>500</td><td>500</td><td>250–500</td><td>250–500</td><td>250–500</td><td>250–500</td><td>500–1500</td></tr>
+      <tr><td>Обработка диска герметиком</td><td>50–200</td><td>50–200</td><td>100–300</td><td>100–500</td><td>100–500</td><td>100–400</td><td>500–1000</td></tr>
+      <tr><td>Утилизация шины</td><td>150</td><td>150</td><td>300</td><td>300</td><td>300</td><td>300</td><td>500</td></tr>
+      <tr><td>Проверка давления колёс (лето / зима)</td><td>30–50</td><td>50–100</td><td>100</td><td>100</td><td>100</td><td>100</td><td>100–200</td></tr>
+      <tr><td>Горячая вулканизация (порез 1–7 мм)</td><td>4500–6000</td><td>4500–6000</td><td>4500–6000</td><td>4500–6000</td><td>6500–8000</td><td>6000–10000</td><td>5000–15000</td></tr>
+      <tr><td>Замена вентиля + вентиль</td><td>400–1000</td><td>500–1000</td><td>500–1000</td><td>500–1000</td><td>500–1000</td><td>500–1000</td><td>500–1000</td></tr>
+      </tbody></table></div>
+  </div>
+
+  <div class="price-panel" id="patch-prices">
+    <div class="patch-intro">Ремонт шины заплатами + установка ножки грибка</div>
+    <div class="patch-grid">
+      <div class="patch-item"><span>R20</span><b>2 000 ₽</b></div><div class="patch-item"><span>RS 45</span><b>4 500 ₽</b></div>
+      <div class="patch-item"><span>RS 25</span><b>2 500 ₽</b></div><div class="patch-item"><span>R23</span><b>2 200 ₽</b></div>
+      <div class="patch-item"><span>RS 539</span><b>4 000 ₽</b></div><div class="patch-item"><span>CRS (A+C+D)</span><b>+500 ₽</b></div>
+      <div class="patch-item"><span>R25</span><b>2 500 ₽</b></div><div class="patch-item"><span>RS 533</span><b>2 800 ₽</b></div>
+      <div class="patch-item"><span>RS 35</span><b>3 000 ₽</b></div><div class="patch-item"><span>R33</span><b>2 300 ₽</b></div>
+      <div class="patch-item"><span>RS 537</span><b>3 300 ₽</b></div><div class="patch-item"><span>R35</span><b>2 500 ₽</b></div>
+      <div class="patch-item"><span>RS 451</span><b>5 000 ₽</b></div><div class="patch-item"><span>R40</span><b>2 500 ₽</b></div>
+      <div class="patch-item"><span>RS 42</span><b>3 300 ₽</b></div><div class="patch-item"><span>СТ 44</span><b>3 800 ₽</b></div>
+      <div class="patch-item"><span>RS 44</span><b>4 000 ₽</b></div><div class="patch-item"><span>СТ 45</span><b>3 800 ₽</b></div>
+      <div class="patch-item"><span>RS 531</span><b>2 500 ₽</b></div><div class="patch-item"><span>RS 40</span><b>2 800 ₽</b></div>
+      <div class="patch-item"><span>RS 535</span><b>3 000 ₽</b></div>
+    </div>
+  </div>
+  <p class="price-note">* В исходном прайс-листе для отдельных позиций значения не были указаны — они отмечены прочерком. Позвоните, чтобы уточнить актуальную стоимость.</p>
+</section>
+
+<section class="section locations" id="locations">
+  <div class="section-heading">
+    <div><div class="eyebrow dark"><span></span> ГЕОГРАФИЯ РАБОТЫ</div><h2>Мы рядом,<br><em>когда нужны.</em></h2></div>
+    <p>Работаем в Новосибирске и Коченёвском районе. Откройте точку на карте, чтобы построить маршрут.</p>
+  </div>
+  <div class="location-list">
+    <a class="location-card" href="https://2gis.ru/novosibirsk/firm/70000001118882519/82.844199%2C54.945224?m=82.844757%2C54.945405%2F18.69" target="_blank" rel="noopener">
+      <span class="location-pin">01</span><span class="location-info"><b>Молокозавод</b><small>Кировский район, Новосибирск, 630088</small></span><span class="location-arrow">↗</span>
+    </a>
+    <a class="location-card" href="https://2gis.ru/novosibirsk/geo/70030076251128227" target="_blank" rel="noopener">
+      <span class="location-pin">02</span><span class="location-info"><b>Северная улица, 1А к2</b><small>Новосибирск</small></span><span class="location-arrow">↗</span>
+    </a>
+    <div class="location-card static-location">
+      <span class="location-pin">03</span><span class="location-info"><b>Ст. Дупленская</b><small>Коченёвский район, Новосибирская область, 632610</small></span><span class="location-arrow">⌖</span>
+    </div>
+  </div>
+</section>
+
+<section class="partners" id="partners">
+  <div class="partners-inner">
+    <div><div class="eyebrow"><span></span> НАШИ ПАРТНЁРЫ</div><h2>Работаем с теми,<br><em>кому доверяем.</em></h2></div>
+    <div class="partner-logos">
+      <a class="partner-logo brinex" href="https://brinex-tbs.ru/" target="_blank" rel="noopener"><span class="partner-symbol">B</span><span><b>BRINEX</b><small>ПАРТНЁР</small></span><i>↗</i></a>
+      <a class="partner-logo shinliga" href="https://shinliga.ru/" target="_blank" rel="noopener"><span class="league-mark">ШЛ</span><span><b>ШИННАЯ ЛИГА</b><small>ПАРТНЁР</small></span><i>↗</i></a>
+    </div>
+    <p class="partner-disclaimer">Логотипы представлены в виде текстовых фирменных обозначений и ссылок на сайты компаний. Для публикации можно заменить их на официальные файлы логотипов партнёров.</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div><div class="eyebrow"><span></span> ЕСТЬ ВОПРОСЫ?</div><h2>Обсудим вашу<br><em>задачу.</em></h2><p>Свяжитесь с руководством, чтобы уточнить стоимость, доступность услуги и детали обслуживания.</p></div>
+    <a class="contact-phone" href="tel:+79833196498"><small>ТЕЛЕФОН ДЛЯ СВЯЗИ С РУКОВОДСТВОМ</small><b>8 983 319-64-98</b><span>Позвонить сейчас ↗</span></a>
+  </div>
+</section>
+</main>
+<footer><a class="brand footer-brand" href="#home"><span class="brand-mark">Ш</span><span><b>ШИННЫЙ СЕРВИС</b><small>ЛЕГКОВОЙ · ГРУЗОВОЙ</small></span></a><span>© 2026 · Шиномонтаж и ремонт шин</span><a href="#home">Наверх ↑</a></footer>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body></html>
